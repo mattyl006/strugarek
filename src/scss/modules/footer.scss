@@ -9,6 +9,10 @@
   left: 0;
   display: flex;
 
+  @media (min-width: 768px) {
+    display: none;
+  }
+
   &__left, &__right {
     height: 64px;
     width: 50%;
@@ -19,7 +23,7 @@
   }
 
   &__icon {
-    margin-right: 16px;
+    margin-right: calc(3vw + 10px);
   }
 
   &__contact {

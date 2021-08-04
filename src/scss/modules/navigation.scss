@@ -1,6 +1,147 @@
 @use "src/scss/variables";
 
+@mixin hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(white, 0.9);
+  position: absolute;
+}
 
-.site-header {
-  display: none;
+.navigation {
+  .hamburger {
+    display: inline-block;
+    position: fixed;
+    top: 10px;
+    right: 12px;
+    border: none;
+    padding: 4px;
+    margin: 0;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    &:focus {
+      outline: variables.$red solid 1px;
+    }
+
+    &__box {
+      width: 18px;
+      height: 12px;
+      display: inline-block;
+      position: relative;
+    }
+
+    &__inner {
+      @include hamburger-line;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: background-color .3s .1s ease-in-out;
+
+      &::before, &::after {
+        @include hamburger-line;
+        content: "";
+        left: 0;
+        transition: transform .3s ease-in-out;
+      }
+
+      &::before {
+        top: -6px;
+      }
+
+      &::after {
+        top: 6px;
+      }
+    }
+
+    &--active .hamburger__inner {
+      background-color: transparent;
+    }
+
+    &--active .hamburger__inner::before {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    &--active .hamburger__inner::after {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+  }
+
+  &__menu {
+    width: 50%;
+    max-width: 224px;
+    height: calc(100vh - 64px);
+    background-color: variables.$dark;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateX(224px);
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      max-width: none;
+      transform: translateX(0);
+      width: 100%;
+      height: 48px;
+      background-color: rgba(variables.$dark, 0.8);
+      backdrop-filter: blur(16px);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 64px 0 0 0;
+    @media (min-width: 768px) {
+      display: flex;
+      order: 2;
+      margin: 0 8px 0 0;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    margin: 32px 0;
+    @media (min-width: 768px) {
+      margin: 0 16px;
+    }
+  }
+
+  &__link {
+    @include variables.nav_mobile;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+
+    @media (min-width: 768px) {
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+
+  &__logo {
+    width: 124px;
+    height: 40px;
+    margin-bottom: 32px;
+    @media (min-width: 768px) {
+      margin: 0 0 0 16px;
+      width: 140px;
+      height: 36px;
+    }
+  }
+}
+
+.menu--visible {
+  transform: translateX(0);
+}
+
+.menu--animation {
+  transition: transform .4s .1s ease-in-out;
 }

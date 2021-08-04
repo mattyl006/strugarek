@@ -2,7 +2,6 @@
 
 @import "_variables";
 @import "modules/hero";
-@import "modules/mobile-navigation";
 @import "modules/navigation";
 @import "modules/footer";
 
@@ -31,5 +30,4 @@ body {
   justify-content: center;
   align-items: center;
   background-color: $dark;
-  padding: 40px 20px 0;
 }

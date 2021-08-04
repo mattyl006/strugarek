@@ -22,13 +22,44 @@
 
     <!-- mobile navigation -->
     <nav class="mobile-navigation">
-      <button class="menu menu--active-js">
-        <span class="menu__box">
-          <span class="menu__inner">
-
+      <button class="hamburger hamburger--js">
+        <span class="hamburger__box">
+          <span class="hamburger__inner">
+            <!-- hamburger hamburger -->
           </span>
         </span>
       </button>
+
+      <!-- navigation sidebar -->
+      <div class="mobile-navigation__menu menu--js">
+        <ul class="mobile-navigation__list">
+          <li class="mobile-navigation__item">
+            <a class="mobile-navigation__link" href="#electric">
+              auto-elektryk
+            </a>
+          </li>
+          <li class="mobile-navigation__item">
+            <a class="mobile-navigation__link" href="#clime">
+              auto-klima
+            </a>
+          </li>
+          <li class="mobile-navigation__item">
+            <a class="mobile-navigation__link" href="#heating">
+              ogrzewanie
+            </a>
+          </li>
+          <li class="mobile-navigation__item">
+            <a class="mobile-navigation__link" href="#contact">
+              kontakt
+            </a>
+          </li>
+        </ul>
+        <a href="#">
+          <img class="mobile-navigation__logo"
+               src="../assets/icons/strugarek_main_logo.svg"
+               alt="Logo Strugarek - stylowe Volvo w pomniejszonej wersji."/>
+        </a>
+      </div>
     </nav>
 
     <!-- desktop navigation -->
@@ -41,7 +72,7 @@
     <main class="main">
 
       <!-- hero view -->
-      <div class="hero">
+      <div class="hero" id="hero">
         <div class="hero__text">
           <h1 class="hero__header">
             Auto-elektryk strugarek

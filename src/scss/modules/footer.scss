@@ -1,0 +1,30 @@
+@use "src/scss/variables";
+
+.footer {
+  background-color: variables.$blue2;
+  width: 100%;
+  height: 64px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+
+  &__left, &__right {
+    height: 64px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  &__icon {
+    margin-right: 16px;
+  }
+
+  &__contact {
+    @include variables.button_mobile;
+    color: white;
+    text-transform: uppercase;
+  }
+}

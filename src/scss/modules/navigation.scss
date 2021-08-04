@@ -75,7 +75,7 @@
     width: 50%;
     max-width: 224px;
     height: calc(100vh - 64px);
-    background-color: variables.$dark;
+    background-color: variables.$blue1;
     position: fixed;
     top: 0;
     right: 0;
@@ -98,6 +98,7 @@
 
     @media (min-width: 1024px) {
       height: 64px;
+      background-color: rgba(variables.$dark, 0.8);
     }
   }
 
@@ -118,6 +119,7 @@
 
   &__item {
     text-align: center;
+    margin: 32px 0;
     @media (min-width: 768px) {
       margin: 0 16px;
     }

@@ -1,3 +1,3 @@
 import '../scss/main.scss';
 
-console.log('HELLO 🚀')
+console.log('HELLO 🚀');

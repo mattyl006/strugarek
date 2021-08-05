@@ -1,10 +1,12 @@
 @use "src/scss/variables";
 
-.electric {
+.clime {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: variables.$darkBlue2;
+  width: 100%;
   padding-top: 64px;
 
   &__header {
@@ -20,25 +22,24 @@
     color: white;
     text-align: center;
     margin: 0 0 32px 0;
-    max-width: 192px;
+    max-width: 240px;
   }
 
   &__offer {
-    padding: 20px 10px;
-    background-color: variables.$red;
+    padding: 24px 12px;
+    background-color: variables.$blue1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 64px;
     box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.25);
 
     &-header {
-      @include variables.h3_mobile;
+      @include variables.bold_mobile;
       color: white;
-      text-align: center;
-      text-transform: uppercase;
       margin: 0 0 24px 0;
+      text-transform: uppercase;
     }
   }
 
@@ -98,8 +99,17 @@
         background-color: transparent;
         background-position: center;
         background-repeat: no-repeat;
-        background-image: url("../assets/icons/wrench.svg");
-        margin-left: 12px;
+        background-image: url("../assets/icons/charity.svg");
+        margin-left: 8px;
+      }
+    }
+
+    &--dark {
+      background-color: variables.$dark;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+      .clime__article-header::after {
+        background-image: url("../assets/icons/money.svg");
       }
     }
   }
@@ -108,19 +118,5 @@
     @include variables.light_mobile;
     color: white;
     margin: 0 0 24px 0;
-
-    &--bolder {
-      @include variables.normal_mobile;
-    }
-  }
-
-  &__strong {
-    @include variables.normal_mobile;
-  }
-
-  &__link {
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
   }
 }

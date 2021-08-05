@@ -1,0 +1,123 @@
+@use "src/scss/variables";
+
+.electric {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.25));
+
+  &__header {
+    @include variables.h2_mobile;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    @include variables.bold_mobile;
+    color: white;
+    text-align: center;
+    margin: 0 0 32px 0;
+    max-width: 192px;
+  }
+
+  &__offer {
+    padding: 20px 10px;
+    background-color: variables.$red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+
+    &-header {
+      @include variables.h3_mobile;
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0 0 24px 0;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0 0 24px 0;
+    list-style: none;
+  }
+
+  &__item {
+    @include variables.light_mobile;
+    color: white;
+    margin: 0 0 20px 24px;
+    position: relative;
+
+    &--last {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: -24px;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("../assets/icons/truck.svg");
+    }
+  }
+
+  &__article {
+    padding: 40px 20px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    background-color: variables.$darkBlue;
+    margin-bottom: 64px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    &-header {
+      @include variables.h3_mobile;
+      color: white;
+      margin: 0 0 32px 0;
+      text-transform: uppercase;
+      text-align: center;
+
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../assets/icons/wrench.svg");
+        margin-left: 12px;
+      }
+    }
+  }
+
+  &__paragraph {
+    @include variables.light_mobile;
+    color: white;
+    margin: 0 0 24px 0;
+
+    &--bolder {
+      @include variables.normal_mobile;
+    }
+  }
+
+  &__strong {
+    @include variables.normal_mobile;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+  }
+}

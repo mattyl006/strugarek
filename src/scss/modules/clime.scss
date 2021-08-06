@@ -24,6 +24,13 @@
   }
 
   &__content-box {
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     @media (min-width: 1024px) {
       margin: 0 48px;
     }
@@ -213,9 +220,10 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-image: url("../assets/icons/charity.svg");
-        margin-left: 12px;
+        margin-left: 8px;
 
         @media (min-width: 768px) {
+          margin-left: 12px;
           width: 32px;
           height: 32px;
         }

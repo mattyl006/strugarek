@@ -133,6 +133,10 @@
     text-transform: uppercase;
     transition: color .3s ease-in-out;
 
+    &:hover {
+      color: variables.$red;
+    }
+
     @media (min-width: 768px) {
       font-family: 'Roboto', sans-serif;
     }

@@ -2,7 +2,7 @@
 
 .photos {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,17 +11,26 @@
   overflow: hidden;
   position: relative;
 
+  @media (min-width: 768px) {
+    padding: 124px 0 0 0;
+  }
+
   &__header {
     @include variables.h2_mobile;
     color: white;
     margin: 0 0 32px 0;
     text-transform: uppercase;
+
+    @media (min-width: 768px) {
+      @include variables.h2;
+    }
   }
 
   &__container {
     width: 1000%;
-    height: 100%;
+    height: 100vh;
     display: flex;
+    transform: translateX(5%);
   }
 
   &__arrow {
@@ -42,21 +51,47 @@
 
     &--left {
       left: 12px;
+      @media (min-width: 1320px) {
+        left: 32px;
+      }
     }
 
     &--right {
       right: 12px;
       transform: rotate(180deg);
+      @media (min-width: 1320px) {
+        right: 32px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      width: 64px;
+      height: 132px;
     }
   }
 
   &__photo {
-    width: 100vw;
+    width: 10%;
     height: 100%;
     object-fit: cover;
-    transform: translateX(50vw);
+    padding: 0 2px;
+
+    @media (min-width: 768px) {
+      padding: 0 1px;
+    }
+
+    &--sony-6 {
+      @media (min-width: 768px) {
+        object-position: top;
+      }
+    }
 
     &--smaller {
+      margin-right: 2px;
+      object-position: top;
+      @media (min-width: 1320px) {
+        object-fit: contain;
+      }
     }
   }
 }
@@ -66,37 +101,37 @@
 }
 
 .left1 {
-  transform: translateX(100vw);
+  transform: translateX(15%);
 }
 
 .left2 {
-  transform: translateX(200vw);
+  transform: translateX(25%);
 }
 
 .left3 {
-  transform: translateX(300vw);
+  transform: translateX(35%);
 }
 
 .left4 {
-  transform: translateX(400vw);
+  transform: translateX(45%);
 }
 
 .right1 {
-  transform: translateX(-100vw);
+  transform: translateX(-5%);
 }
 
 .right2 {
-  transform: translateX(-200vw);
+  transform: translateX(-15%);
 }
 
 .right3 {
-  transform: translateX(-300vw);
+  transform: translateX(-25%);
 }
 
 .right4 {
-  transform: translateX(-400vw);
+  transform: translateX(-35%);
 }
 
 .right5 {
-  transform: translateX(-500vw);
+  transform: translateX(-45%);
 }

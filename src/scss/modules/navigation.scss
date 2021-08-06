@@ -85,6 +85,7 @@
     align-items: center;
     transform: translateX(224px);
     z-index: 2;
+    box-shadow: -2px -4px 4px rgba(108, 113, 237, 0.25);
 
     @media (min-width: 768px) {
       flex-direction: row;

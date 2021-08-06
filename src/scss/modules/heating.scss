@@ -1,0 +1,124 @@
+@use "src/scss/variables";
+
+.heating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: variables.$dark;
+  width: 100%;
+  padding-top: 64px;
+
+  &__header {
+    @include variables.h2_mobile;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 24px 0;
+  }
+
+  &__subtitle {
+    @include variables.bold_mobile;
+    color: white;
+    text-align: center;
+    margin: 0 0 32px 0;
+    max-width: 240px;
+  }
+
+  &__offer {
+    padding: 24px;
+    background-color: variables.$blue1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 64px;
+    box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.25);
+
+    &-header {
+      @include variables.normal_mobile;
+      color: white;
+      margin: 0 0 24px 12px;
+      text-transform: uppercase;
+      max-width: 260px;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0 0 24px 0;
+    list-style: none;
+  }
+
+  &__item {
+    @include variables.light_mobile;
+    color: white;
+    margin: 0 0 20px 24px;
+    position: relative;
+
+    &--last {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: -24px;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("../assets/icons/truck.svg");
+    }
+  }
+
+  &__article {
+    padding: 40px 20px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    background-color: variables.$darkBlue;
+    margin-bottom: 64px;
+    box-shadow: 0 4px 4px rgba(61, 59, 164, 0.25);
+    max-width: 600px;
+
+    &-header {
+      @include variables.h3_mobile;
+      color: white;
+      margin: 0 0 32px 0;
+      text-transform: uppercase;
+      text-align: center;
+
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../assets/icons/fire.svg");
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &__paragraph {
+    @include variables.light_mobile;
+    color: white;
+    margin: 0 0 24px 0;
+  }
+
+  &__strong {
+    @include variables.bold_mobile;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+  }
+}

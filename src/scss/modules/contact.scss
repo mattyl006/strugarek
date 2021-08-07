@@ -1,0 +1,168 @@
+@use "src/scss/variables";
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 80px;
+
+  @media (min-width: 768px) {
+    padding: 64px 32px;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+
+  &__content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 1024px) {
+      align-items: start;
+      margin: 0 60px;
+    }
+  }
+
+  &__header {
+    @include variables.h2_mobile;
+    color: white;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+
+    @media (min-width: 768px) {
+      @include variables.h2;
+    }
+  }
+
+  &__container {
+    margin-bottom: 44px;
+
+    @media (min-width: 768px) {
+      padding: 34px 20px 24px;
+      background-color: variables.$darkBlue;
+      box-shadow: 0 2px 4px rgba(14, 111, 255, 0.25);
+    }
+  }
+
+  &__paragraph {
+    @include variables.normal_mobile;
+    color: white;
+    margin: 0 0 24px 0;
+
+    @media (min-width: 768px) {
+      @include variables.normal;
+    }
+  }
+
+  &__bolder {
+    @include variables.bold_mobile;
+    text-transform: uppercase;
+    margin-right: 4px;
+
+    @media (min-width: 768px) {
+      @include variables.bold;
+    }
+  }
+
+  &__link {
+    @include variables.bold_mobile;
+    text-decoration: none;
+    color: variables.$blue1;
+
+    @media (min-width: 768px) {
+      @include variables.bold;
+    }
+  }
+
+  &__hours-box {
+
+  }
+
+  &__hour {
+    @include variables.normal_mobile;
+    margin: 0 0 8px 0;
+    color: white;
+
+    @media (min-width: 768px) {
+      @include variables.normal;
+    }
+
+    &--bolder {
+      @include variables.bold_mobile;
+      text-transform: uppercase;
+
+      @media (min-width: 768px) {
+        @include variables.bold;
+      }
+    }
+  }
+
+  &__red {
+    color: variables.$red;
+  }
+
+  &__buttons {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      width: 400px;
+      align-items: start;
+      margin: 0 60px;
+    }
+  }
+
+  &__button {
+    background-color: variables.$blue2;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    margin: 12px 0;
+    text-decoration: none;
+    transition: transform .3s .1s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @media (min-width: 1024px) {
+      margin: 20px 0;
+    }
+
+    &--mail {
+      display: none;
+      @media (min-width: 768px) {
+        display: flex;
+      }
+    }
+
+    &--tel {
+      display: none;
+      @media (min-width: 768px) {
+        display: flex;
+      }
+    }
+  }
+
+  &__icon {
+    margin-left: 16px;
+  }
+
+  &__label {
+    @include variables.button_mobile;
+    text-transform: uppercase;
+    color: white;
+    margin: 0 20px;
+
+    @media (min-width: 768px) {
+      @include variables.button;
+    }
+  }
+}

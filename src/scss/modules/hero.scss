@@ -23,7 +23,7 @@
     margin-bottom: 80px;
 
     @media (min-width: 768px) {
-      background-image: url("../assets/img/DJI_1-tablet.png");
+      background-image: url("../assets/img/DJI_1-tablet.jpg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -33,7 +33,7 @@
     }
 
     @media (min-width: 1024px) {
-      background-image: url("../assets/img/DJI_1.png");
+      background-image: url("../assets/img/DJI_1.jpg");
       background-position: left 40%;
       height: calc(100vh - 64px);
       position: relative;

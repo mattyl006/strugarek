@@ -10,10 +10,11 @@
   padding: 32px 0 0 0;
   overflow: hidden;
   position: relative;
-  background-color: variables.$darkBlue2;
+  background-color: variables.$dark;
 
   @media (min-width: 768px) {
     padding: 124px 0 0 0;
+    background-color: variables.$darkBlue2;
   }
 
   &__header {

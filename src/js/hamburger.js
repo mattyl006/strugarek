@@ -3,17 +3,27 @@ const menu = document.querySelector('.menu--js');
 const main = document.querySelector('.main--js');
 
 const handleHamburgerClick = () => {
-    hamburger.classList.toggle('hamburger--active');
+    if(hamburger.classList.contains('hamburger--active')) {
+        hamburger.classList.remove('hamburger--active');
+    } else {
+        hamburger.classList.add('hamburger--active');
+    }
 }
 
 const handleMenuClick = () => {
     menu.classList.add('menu--animation');
-    menu.classList.toggle('menu--visible');
+    if(menu.classList.contains('menu--visible')) {
+        menu.classList.remove('menu--visible');
+    } else {
+        menu.classList.add('menu--visible');
+    }
 }
 
 const handleMainClick = () => {
-    menu.classList.remove('menu--visible');
-    hamburger.classList.toggle('hamburger--active');
+    if(menu.classList.contains('menu--visible')) {
+        menu.classList.remove('menu--visible');
+        hamburger.classList.remove('hamburger--active');
+    }
 }
 
 hamburger.addEventListener('click', handleHamburgerClick);

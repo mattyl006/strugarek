@@ -7,13 +7,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 32px 0 0 0;
-  overflow: hidden;
-  position: relative;
+  padding: 32px 0;
   background-color: variables.$dark;
 
   @media (min-width: 768px) {
-    padding: 124px 0 0 0;
+    padding: 124px 0;
     background-color: variables.$darkBlue2;
   }
 
@@ -25,121 +23,44 @@
 
     @media (min-width: 768px) {
       @include variables.h2;
+      margin: 0 0 64px 0;
     }
   }
 
   &__container {
-    width: 1000%;
-    height: 100vh;
-    display: flex;
-    transform: translateX(5%);
-  }
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 16px;
 
-  &__arrow {
-    display: none;
     @media (min-width: 1024px) {
-      display: block;
-      position: absolute;
-      width: 10%;
-      height: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      //background-size: contain;
-      background-color: transparent;
-      background-image: url("../assets/icons/arrow.svg");
-      z-index: 1;
-      top: 118px;
-      border: none;
-      padding: 0;
-      margin: 0;
-      cursor: pointer;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 24px;
+      grid-column-gap: 24px;
+    }
 
-      &--left {
-        left: 0;
-      }
-
-      &--right {
-        right: 0;
-        transform: rotate(180deg);
-      }
+    @media (min-width: 1440px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row-gap: 32px;
+      grid-column-gap: 32px;
     }
   }
 
   &__link {
-    display: block;
-    width: 10%;
-    max-width: 2000px;
-    cursor: auto;
-    padding: 0 2px;
+    transition: transform .3s .1s ease-in-out;
 
-    @media (min-width: 768px) {
-      padding: 0 1px;
+    &:hover {
+      transform: scale(1.1);
     }
   }
 
   &__photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 300px;
+    height: 160px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
-    &--sony-3 {
-      @media (max-width: 768px) {
-        object-position: right;
-      }
-    }
-
-    &--sony-6 {
-      @media (min-width: 768px) {
-        object-position: top;
-      }
-    }
-
-    &--smaller {
-      margin-right: 2px;
-      object-position: top;
-      @media (min-width: 1320px) {
-        object-fit: contain;
-      }
+    @media (min-width: 768px) {
+      width: 400px;
+      height: 220px;
     }
   }
-}
-
-.photos-animation {
-  transition: transform .3s .1s ease-in-out;
-}
-
-.left1 {
-  transform: translateX(15%);
-}
-
-.left2 {
-  transform: translateX(25%);
-}
-
-.left3 {
-  transform: translateX(35%);
-}
-
-.left4 {
-  transform: translateX(45%);
-}
-
-.right1 {
-  transform: translateX(-5%);
-}
-
-.right2 {
-  transform: translateX(-15%);
-}
-
-.right3 {
-  transform: translateX(-25%);
-}
-
-.right4 {
-  transform: translateX(-35%);
-}
-
-.right5 {
-  transform: translateX(-45%);
 }

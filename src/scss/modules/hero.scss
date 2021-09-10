@@ -86,16 +86,8 @@
       font-size: 20px;
       line-height: 24px;
       text-align: left;
-      margin-left: calc(10vw + 32px);
+      margin-left: calc(10vw - 68px);
     }
-  }
-
-  &__logo {
-    width: calc(268px + 8vw);
-    height: calc(56px + 6vh);
-    margin-top: calc(10vh - 32px);
-
-    display: none;
   }
 
   &__link {

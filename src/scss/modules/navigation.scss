@@ -8,6 +8,16 @@
 }
 
 .navigation {
+
+  &__logo-left {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 110px;
+    height: 36px;
+    object-fit: contain;
+  }
+
   .hamburger {
     display: inline-block;
     position: fixed;

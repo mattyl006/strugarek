@@ -83,10 +83,12 @@
     text-align: center;
     margin: 0 0 32px 0;
     max-width: 500px;
+    padding: 0 8px;
 
     @media (min-width: 768px) {
       @include variables.bold;
       margin: 0 0 36px 0;
+      padding: 0;
     }
 
     @media (min-width: 1024px) {
